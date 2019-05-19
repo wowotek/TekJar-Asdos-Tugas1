@@ -27,27 +27,36 @@ Install dan meng-integrasikan software Virtual Machine kedalam GNS3
 ## Hasil Pengerjaan
 > **PERINGATAN**: Tugas ini dibuat di Sistem Operasi **_GNU/Linux_** Distribusi **Ubuntu v18.04**, Tidak ada jaminan dapat bekerja di Sistem Operasi Lain
 
+### _(Opsional)_ Setup `AMD-V` Di Bios Anda
+> **PERINGATAN**: Tahap ini dibuat menggunakan `BIOS` _Motherboard_ **Gigabyte**, tidak ada jaminan tahap akan sama dengan _Motherboard_ lain.
+1. Masuk kedalam bios anda (Tekan Tombol _Delete_ saat `Booting`)
+2. Pilih _Tab_ `M.I.T`
+3. Lalu pilih menu `Advanced Frequency Settings`
+4. Lalu pastikan menu `SVM Mode` pada posisi `Enabled`
+5. Arahkan ke _Tab_ `Save & Exit`
+6. Lalu tekan `Save Changes & Reboot`
+
 ### VMware
 #### Installasi VMware
 1. Download `VMware` dari Link berikut : [VMware.com](https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html)
     1. Dengan browser
     2. Dengan terminal
     ```bash
-    wget -P ~/Downloads \
+    $ wget -P ~/Downloads \
         https://download3.vmware.com/software/wkst/file/VMware-Workstation-Full-15.1.0-13591040.x86_64.bundle
     ```
 2. Pindah Direktori, ke tempat dimana `VMware` di download.
     ```bash
     # dengan asumsi `VMware` di download pada folder `~/Downloads/`
-    cd ~/Downloads/
+    $ cd ~/Downloads/
     ```
 3. _(Opsional)_ Ubah nama installasi `VMware` ke nama yang lebih mudah
     ```bash
-    mv VMware* vmware.bundle
+    $ mv VMware* vmware.bundle
     ```
 4. Jalankan installasi dengan perintah
     ```bash
-    sudo sh ./vmware.bundle
+    $ sudo sh ./vmware.bundle
     ```
 5. Masukkan password jika diperlukan
 6. Baca Dokumen **_`VMwate Workstation - End User License Agreement`_** dengan seksama
@@ -66,24 +75,38 @@ Install dan meng-integrasikan software Virtual Machine kedalam GNS3
 17. Tunggu proses installasi sampai selesai
 18. Proses installasi telah selesai. klik tombol `Close`
 
-#### Installasi GNS3
-1. Download GNS3 dari Link Berikut : 
+#### Installasi GNS3-VM Pada VMware
+1. Download GNS3-VM 
     1. Dengan Browser
-        1. Download melalui link berikut : [GNS3 Downloads](https://www.gns3.com/software/download-vm)
+        1. Download melalui link berikut : [GNS3-VM Downloads](https://www.gns3.com/software/download-vm)
         2. Klik Tombol Download dibawah kolom **_`VMWARE WORKSTATION AND FUSION`_**
     2. Dengan Terminal
     ```bash
-    wget -P ~/Downloads \
+    $ wget -P ~/Downloads \
         https://github-production-release-asset-2e65be.s3.amazonaws.com/13111393/ac245300-7896-11e9-85a0-7f143b48505a?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20190518%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20190518T132535Z&X-Amz-Expires=300&X-Amz-Signature=3f02041c5abc0e2fa7d9d98e6d0e6d50dcf082d177f0dff1093c16f57e240939&X-Amz-SignedHeaders=host&actor_id=25195739&response-content-disposition=attachment%3B%20filename%3DGNS3.VM.VMware.Workstation.2.1.17.zip&response-content-type=application%2Foctet-stream
     ```
 2. Unzip file yang sudah di download:
     ```bash
-    unzip GNS3*
+    $ unzip GNS3*
     ```
 3. Buka `VMware Workstation`
 4. Tekan Tombol `Open a Virtual Machine`
-5. Arahkan ke File `GNS3*.ova` yang baru anda Unzip, lalu tekan Open
+5. Arahkan ke File `GNS3*`**`.ova`** yang baru anda Unzip, lalu tekan Open
 6. _(Opsional)_ Ubah Nama VM dan Lokasi penyimpanannya.
 7. Tekan Import
 
-#### _(Opsional)_ Setup `AMD-V` Di Bios Anda
+#### Installasi GNS3-GUI
+1. tambahkan Repository `GNS3` kedalam Sistem `APT`
+    ```bash
+    $ sudo add-apt-repository ppa:gns3/ppa
+    ```
+2. Update _Listing_ Repository anda
+    ```bash
+    $ sudo apt-get update
+    ```
+3. Download dan install `GNS3-GUI`
+    ```bash
+    $ sudo apt-get install -f -y gns3-gui
+    ```
+4. Tekan tombol no, jika anda di peringati oleh dialog berikut
+5. Tekan tombol yes, jika anda di peringati oleh dialog berikut
