@@ -34,7 +34,7 @@ Install dan meng-integrasikan software Virtual Machine kedalam GNS3
     2. Dengan terminal
     ```bash
     wget -P ~/Downloads \
-    https://download3.vmware.com/software/wkst/file/VMware-Workstation-Full-15.1.0-13591040.x86_64.bundle
+        https://download3.vmware.com/software/wkst/file/VMware-Workstation-Full-15.1.0-13591040.x86_64.bundle
     ```
 2. Pindah Direktori, ke tempat dimana `VMware` di download.
     ```bash
@@ -67,3 +67,23 @@ Install dan meng-integrasikan software Virtual Machine kedalam GNS3
 18. Proses installasi telah selesai. klik tombol `Close`
 
 #### Installasi GNS3
+1. Download GNS3 dari Link Berikut : 
+    1. Dengan Browser
+        1. Download melalui link berikut : [GNS3 Downloads](https://www.gns3.com/software/download-vm)
+        2. Klik Tombol Download dibawah kolom **_`VMWARE WORKSTATION AND FUSION`_**
+    2. Dengan Terminal
+    ```bash
+    wget -P ~/Downloads \
+        https://github-production-release-asset-2e65be.s3.amazonaws.com/13111393/ac245300-7896-11e9-85a0-7f143b48505a?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20190518%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20190518T132535Z&X-Amz-Expires=300&X-Amz-Signature=3f02041c5abc0e2fa7d9d98e6d0e6d50dcf082d177f0dff1093c16f57e240939&X-Amz-SignedHeaders=host&actor_id=25195739&response-content-disposition=attachment%3B%20filename%3DGNS3.VM.VMware.Workstation.2.1.17.zip&response-content-type=application%2Foctet-stream
+    ```
+2. Unzip file yang sudah di download:
+    ```bash
+    unzip GNS3*
+    ```
+3. Buka `VMware Workstation`
+4. Tekan Tombol `Open a Virtual Machine`
+5. Arahkan ke File `GNS3*.ova` yang baru anda Unzip, lalu tekan Open
+6. _(Opsional)_ Ubah Nama VM dan Lokasi penyimpanannya.
+7. Tekan Import
+
+#### _(Opsional)_ Setup `AMD-V` Di Bios Anda
