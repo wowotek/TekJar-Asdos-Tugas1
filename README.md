@@ -110,3 +110,19 @@ Install dan meng-integrasikan software Virtual Machine kedalam GNS3
     ```
 4. Tekan tombol no, jika anda di peringati oleh dialog berikut
 5. Tekan tombol yes, jika anda di peringati oleh dialog berikut
+
+#### Setup GNS3
+1. Buka GNS3, Lalu anda akan temui jendela Setup Wizard
+2. Pilih `Run the topologies in an isolated and standard VM` lalu tekan `Next`
+3. Gunakan konfigurasi default untuk `Server path`, `Host binding`, dan `Port` lalu tekan Next
+4. Pilih `VMware` pada _Virtualization Software_
+5. _(Opsional)_ Ubah nama Virtual Machine, jumlah virtual CPU cores, besar RAM sesuai keinginan anda
+6. Tekan tombol Next
+7. jendela VMware Workstation secara otomatis akan terbuka. lalu di dalam GNS3-VM silahkan tekan tombol `OK`
+
+#### Installasi Qemu
+1. Buka GNS3
+2. Di jendela Project, silahkan beri nama dan lokasi penyimpanan
+3. 
+### Vbox
+> TODO : Create VirtualBox Version of this tutorial
