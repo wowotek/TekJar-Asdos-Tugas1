@@ -4,7 +4,7 @@
 > atau dengan membaca file `LICENSE`
 
 > Semua sumber yang digunakan pada tugas ini, dapat dilihat pada :
-> https://github.com/wowotek/TekJar-Tugas1
+> https://github.com/wowotek/TekJar-Asdos-Tugas1
 
 > **PERINGATAN** : *Tugas ini dirilis setelah tenggat waktu pengumpulan tugas, dan tidak akan berlaku untuk kolega dengan tenggat waktu pengumpulan yang sama*
 
